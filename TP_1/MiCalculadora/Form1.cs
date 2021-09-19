@@ -44,8 +44,15 @@ namespace MiCalculadora
             StringBuilder sb = new StringBuilder();
 
             lblResultado.Text = FormCalculadora.Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
-
-            sb.AppendLine(txtNumero1.Text);
+                        
+            if(txtNumero1.Text == "")
+            {
+                sb.AppendLine("0");
+            }
+            else
+            {
+                sb.AppendLine(txtNumero1.Text);
+            }
            
             if (cmbOperador.Text == "")
             {                
@@ -55,8 +62,16 @@ namespace MiCalculadora
             {
                 sb.AppendLine(cmbOperador.Text);
             }
-            
-            sb.AppendLine(txtNumero2.Text);
+
+            if (txtNumero2.Text == "")
+            {
+                sb.AppendLine("0");
+            }
+            else
+            {
+                sb.AppendLine(txtNumero2.Text);
+            }
+          
             sb.AppendLine(" = ");
             sb.AppendLine(lblResultado.Text);
 
@@ -66,7 +81,6 @@ namespace MiCalculadora
 
         private void Limpiar()
         {
-
             txtNumero1.Clear();
             txtNumero2.Clear();
             cmbOperador.Text = "";
@@ -86,12 +100,6 @@ namespace MiCalculadora
 
             resultado = Calculadora.Operar(n1, n2, auxOperador);
             return resultado;
-
-
-
-            //char.Parse(operador)
-
-
 
         }
 

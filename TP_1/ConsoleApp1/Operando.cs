@@ -31,7 +31,6 @@ namespace Entidades
 
         }
 
-
         /// <summary>
         /// Valida si en el string hay caracteres de números
         /// </summary>
