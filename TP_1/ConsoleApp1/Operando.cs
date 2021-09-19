@@ -31,6 +31,12 @@ namespace Entidades
 
         }
 
+
+        /// <summary>
+        /// Valida si en el string hay caracteres de números
+        /// </summary>
+        /// <param name="strNumero"></param>
+        /// <returns> Si hay, devuelve el número sino 0 </returns> 
         private double ValidarOperando (string strNumero)
         {
             double numStr;
@@ -44,6 +50,12 @@ namespace Entidades
             return resultado;
         }
 
+        /// <summary>
+        /// Convierte un número binario a número decimal.
+        /// Valida previamente que el string sea número y binario
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns>Retorna el numero convertido a decimal en tipo string</returns>
         public static string BinarioDecimal(string binario)
         {
             int resultado = 0;
@@ -74,6 +86,11 @@ namespace Entidades
 
         }
 
+        /// <summary>
+        /// Convierte un numero decimal a numero binario.
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns>Retorna el numero convertido a binario en tipo string</returns>
         public static string DecimalBinario(double numero)
         {
             string retorno = "";
@@ -88,6 +105,12 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Convierte un numero decimal a numero binario. 
+        /// Valida previamente que el string sea número y binario.
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns>Retorna el numero convertido a binario en tipo string</returns>
         public static string DecimalBinario(string numero)
         {
             string retorno = "";
@@ -105,6 +128,11 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Valida que la cadena ingresada sea numero binario
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns>Si lo es retorna true, sino false</returns>
         private static bool EsBinario(string binario)
         {
             bool retorno = true;
@@ -122,15 +150,27 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Sobrecarga el operador - para restar dos objetos del tipo Operando
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>Retorna el resultado en tipo double</returns>
         public static double operator -(Operando n1, Operando n2)
         {
             double resultado;
-
+                               
             resultado = n1.numero - n2.numero;
 
             return resultado;
         }
 
+        /// <summary>
+        ///  Sobrecarga el operador + para sumar dos objetos del tipo Operando
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>Retorna el resultado en tipo double</returns>
         public static double operator +(Operando n1, Operando n2)
         {
             double resultado;
@@ -140,6 +180,12 @@ namespace Entidades
             return resultado;
         }
 
+        /// <summary>
+        /// Sobrecarga el operador / para dividir dos objetos del tipo Operando
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>Retorna el resultado en tipo double</returns>
         public static double operator /(Operando n1, Operando n2)
         {
             double resultado;
@@ -156,6 +202,12 @@ namespace Entidades
             return resultado;
         }
 
+        /// <summary>
+        /// Sobrecarga el operador * para multiplicar dos objetos del tipo Operando
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>Retorna el resultado en tipo double</returns>
         public static double operator *(Operando n1, Operando n2)
         {
             double resultado;

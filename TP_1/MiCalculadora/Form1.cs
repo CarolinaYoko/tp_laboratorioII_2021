@@ -17,8 +17,6 @@ namespace MiCalculadora
         {
             InitializeComponent();
         }
-        
-        
 
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -28,7 +26,7 @@ namespace MiCalculadora
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-           this.Close();                        
+            this.Close();
         }
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
@@ -48,18 +46,27 @@ namespace MiCalculadora
             lblResultado.Text = FormCalculadora.Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
 
             sb.AppendLine(txtNumero1.Text);
-            sb.AppendLine(cmbOperador.Text);
+           
+            if (cmbOperador.Text == "")
+            {                
+                sb.AppendLine("+");
+            }
+            else
+            {
+                sb.AppendLine(cmbOperador.Text);
+            }
+            
             sb.AppendLine(txtNumero2.Text);
             sb.AppendLine(" = ");
-            sb.AppendLine(lblResultado.Text);                       
+            sb.AppendLine(lblResultado.Text);
 
             lstOperaciones.Items.Add(sb.ToString());
-            
+
         }
 
         private void Limpiar()
         {
-            
+
             txtNumero1.Clear();
             txtNumero2.Clear();
             cmbOperador.Text = "";
@@ -72,7 +79,19 @@ namespace MiCalculadora
             Operando n1 = new Operando(numero1);
             Operando n2 = new Operando(numero2);
 
-            return Calculadora.Operar(n1, n2, char.Parse(operador));
+            char auxOperador = '\0';
+            double resultado = 0;
+
+            char.TryParse(operador, out auxOperador);
+
+            resultado = Calculadora.Operar(n1, n2, auxOperador);
+            return resultado;
+
+
+
+            //char.Parse(operador)
+
+
 
         }
 
@@ -80,7 +99,7 @@ namespace MiCalculadora
         {
             if (MessageBox.Show("¿Seguro de querer salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
-                e.Cancel = true;            
+                e.Cancel = true;
             }
         }
     }

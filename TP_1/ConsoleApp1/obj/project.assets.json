@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carolina\\Desktop\\tps_laboratorio_II\\TP_1\\tp_1\\ConsoleApp1\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\Carolina\\Desktop\\tps_laboratorio_II\\TP_1\\ConsoleApp1\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\Carolina\\Desktop\\tps_laboratorio_II\\TP_1\\tp_1\\ConsoleApp1\\Entidades.csproj",
+      "projectPath": "C:\\Users\\Carolina\\Desktop\\tps_laboratorio_II\\TP_1\\ConsoleApp1\\Entidades.csproj",
       "packagesPath": "C:\\Users\\Carolina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carolina\\Desktop\\tps_laboratorio_II\\TP_1\\tp_1\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\Carolina\\Desktop\\tps_laboratorio_II\\TP_1\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
