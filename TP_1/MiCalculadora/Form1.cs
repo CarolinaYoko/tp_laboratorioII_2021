@@ -79,6 +79,9 @@ namespace MiCalculadora
 
         }
 
+        /// <summary>
+        /// Borrará los datos de los TextBox, ComboBox y Label de la pantalla   
+        /// </summary>
         private void Limpiar()
         {
             txtNumero1.Clear();
@@ -88,6 +91,13 @@ namespace MiCalculadora
 
         }
 
+        /// <summary>
+        /// Recibirá los dos números y el operador para luego llamar al método Operar de Calculadora
+        /// </summary>
+        /// <param name="numero1"></param>
+        /// <param name="numero2"></param>
+        /// <param name="operador"></param>
+        /// <returns>Resultado del método Operar de la clase Calculadora</returns>
         static double Operar(string numero1, string numero2, string operador)
         {
             Operando n1 = new Operando(numero1);
