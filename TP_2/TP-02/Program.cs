@@ -45,7 +45,7 @@ namespace TP_02_2018
             Console.ReadKey();
             Console.Clear();
 
-            // Quito 1 items y muestro
+            // Quito 2 items y muestro
             taller -= c1;
             taller -= new Ciclomotor(Vehiculo.EMarca.Honda, "ASD913", ConsoleColor.Red);
 
