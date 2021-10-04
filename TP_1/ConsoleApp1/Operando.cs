@@ -15,7 +15,7 @@ namespace Entidades
             this.numero = 0;
         }
 
-        public Operando(double numero)
+        public Operando(double numero) : this()
         {
             this.numero = numero;
         }
@@ -39,14 +39,10 @@ namespace Entidades
         private double ValidarOperando (string strNumero)
         {
             double numStr;
-            double resultado = 0; 
 
-            if (double.TryParse(strNumero, out numStr))
-            {
-                resultado = numStr;
-            }
-            
-            return resultado;
+            double.TryParse(strNumero, out numStr);                       
+
+            return numStr;
         }
 
         /// <summary>
